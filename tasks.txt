@@ -1,0 +1,123 @@
+Please pick ONE of the following: 
+
+--------
+TASK 1 (ML eng. only)
+--------
+
+Imagine the digits in the test set of the MNIST dataset
+(http://yann.lecun.com/exdb/mnist/) got cut in half vertically and shuffled around. Although the
+two resulting halves of each image do not have any shared pixels, there are
+similarities in their structure. Implement a way to restore the original test
+set from the two halves, whilst maximising the overall matching accuracy.
+
+--------
+TASK 2 (ML eng. only)
+--------
+
+Worldline has open sourced some of their data of credit card transactions to
+try to predict fraud:
+
+https://www.kaggle.com/mlg-ulb/creditcardfraud
+
+Although this dataset is public, it might still contain personally
+identifiable information which could be reverse-engineered.
+
+Implement a way to generate a synthetic copy of this dataset which preserves as
+much of the structure as possible, but obfuscates the raw observations. As a
+bonus, add differential privacy to the weights of this generator during
+training to impose a mathematical guarantee on the observations. 
+
+To gauge the quality of the synthetic data, train a classifier on it and test
+its performance on a held-out set of observations from the original data. 
+
+Note that accuracy is measured as area under ROC curve between predicted
+probability and observed target. 
+
+--------
+TASK 3 (ML eng. only)
+--------
+
+Worldline has open sourced some of their data of credit card transactions to
+try to predict fraud:
+
+https://www.kaggle.com/mlg-ulb/creditcardfraud
+
+Imagine this dataset is cut in half horizontally. Alice has half of the data
+and Bob has the other half. Neither of them wants to send their raw data to us.
+However, we convince them to let our model learn from their data in a federated
+setting. Implement a way for our model to train on the combined data of both
+Alice and Bob without either of them sending us any raw data. Does your
+approach have a quantifiable "privacy budget" (some approaches do, others don't)?
+Compare the accuracy of this model with one which has access to all of the raw
+data at once.
+
+--------
+TASK 4 (software dev only)
+--------
+
+LevelDB is a fast key-value store developed by Google and now used as an
+adapter for databases like PouchDB. However, it is only meant to
+work on a single node. Implement a distributed LevelDB that is highly-available
+and consistent.
+
+--------
+TASK 5 (software dev only)
+--------
+
+Build a file sharing service that can sync folders between multiple machines.
+What happens if two machines change the same file simultaneously? How can you
+make it fast?
+
+-------
+TASK 6 (devops only)
+--------
+
+Create a terraform repository that can fire up a kubernetes stack in
+the cloud of your choice that can be used in production. Extra points
+for certificate handling, autoscaling, monitoring, alerting, etc.
+
+--------
+FAQ
+--------
+
+*** How shall this be submitted? ***
+
+When you are done, upload the directory to a private repo and add @iliazintchenko as a
+collaborator. Send a link to the repo to 
+
+ilia@ntropy.network
+
+If all goes well, we will then schedule a video call and discuss your solution.
+
+*** In which language should the solution be implemented? ***
+
+Any language you are most comfortable with. Python has the most mature
+ML tooling around it.
+
+*** What is the deadline to submit? ***
+
+No later than 1 week after receiving this task. The sooner the better.
+
+*** What if I need a more-than-reasonable amount of compute? ***
+
+In this case, there is probably a lot of room to optimise your code. You can
+also work with a smaller slice of the data if the full array is too slow.
+
+*** What other tools can I use? *** 
+
+You can use any publicly available tool to help with your solution. However,
+the solution should be entirely your own (no human help) and please do not
+disclose details of this task to anyone else. 
+
+*** How long should this take? ***
+
+In fairness to other candidates, please time yourself and make sure not to
+spend more than 4 hours.
+
+*** Is this basically volunteer work? ***
+
+Yes. The tasks are continuously refreshed to reflect what we are
+currently working on internally. However, if any parts of your solution end up
+in production, you will be notified and it will very likely be after
+we have already extended you an offer to work with us:)
+
